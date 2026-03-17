@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>图形推理测试 - 答题小程序</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>图形推理测试</h1>
+            <div class="progress">
+                <span id="progress-text">第 1 题 / 共 2 题</span>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill" style="width: 50%;"></div>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="question-container" id="question-container">
+                <div class="question-number" id="question-number">第 1 题</div>
+                <div class="question-image" id="question-image">
+                    <img src="img/question1.jpg" alt="题目1" style="max-width: 100%; max-height: 300px;">
+                </div>
+                <div class="options" id="options">
+                    <div class="option" data-label="A">
+                        <div class="option-label">A</div>
+                        <img src="img/option1a.jpg" alt="选项A" style="max-width: 100%; max-height: 150px;">
+                    </div>
+                    <div class="option" data-label="B">
+                        <div class="option-label">B</div>
+                        <img src="img/option1b.jpg" alt="选项B" style="max-width: 100%; max-height: 150px;">
+                    </div>
+                    <div class="option" data-label="C">
+                        <div class="option-label">C</div>
+                        <img src="img/option1c.jpg" alt="选项C" style="max-width: 100%; max-height: 150px;">
+                    </div>
+                    <div class="option" data-label="D">
+                        <div class="option-label">D</div>
+                        <img src="img/option1d.jpg" alt="选项D" style="max-width: 100%; max-height: 150px;">
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <button class="btn" id="prev-btn" disabled>上一题</button>
+            <button class="btn" id="next-btn" style="display: none;">下一题</button>
+            <button class="btn btn-primary" id="submit-btn" style="display: block;">提交答案</button>
+        </footer>
+    </div>
+
+    <div class="result-modal" id="result-modal" style="display: none;">
+        <div class="modal-content">
+            <h2>测试结果</h2>
+            <div class="result-score" id="result-score">得分：0 分</div>
+            <div class="result-detail" id="result-detail">
+                <p>总题目数：1 题</p>
+                <p>正确：0 题</p>
+                <p>错误：1 题</p>
+                <p>正确率：0.0%</p>
+            </div>
+            <button class="btn btn-primary" id="restart-btn">重新测试</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
